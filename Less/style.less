@@ -1,0 +1,58 @@
+﻿@import "init";
+
+@main-color:Pink;
+@header-color:Yello;
+@base-size: 14px;
+
+body {
+   background-color:@main-color;
+}
+
+h1{
+    .display-font-size(40px);
+    color:@header-color;
+}
+
+h2{
+   .display-font-size(5px);
+}
+
+.display-font-size(@size)
+{
+     font-size: @base-size + @size;
+}
+
+.navbar {
+    background-color: green;
+
+
+    .navbar-brand {
+        color: white;
+
+        &:hover {
+            color: pink;
+        }
+    }
+
+    .navbar-nav {
+        li {
+            a {
+                color: red;
+
+                &:hover {
+                    color: pink;
+                }
+            }
+        }
+    }
+
+    .navbar-form {
+        button {
+            background-color: aqua;
+            color: navy;
+        }
+
+        input {
+        }
+    }
+}
